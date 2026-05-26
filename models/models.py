@@ -12,7 +12,7 @@ class InsurancePolicy(models.Model):
     policyholder_id = fields.Many2one('res.partner', string='Policy holder', domain=[('customer_rank', '>', 0)])
     product_id = fields.Many2one('product.template', string='Insurance')
     broker_id = fields.Many2one('res.partner', string='Insurance Broker', domain=[('supplir_rank', '>', 0)])
-    created_by = fields.Many2one('res.users', string='Created by', default=lambda self: self.env.user)
+    created_by = fields.Many2one('res.partner', string='Created by', default=lambda self: self.env.user)
     created_date = fields.Datetime(string='Created Date', default=fields.Datetime.now)
     object = fields.Text('Insured Object')
     cancellation_date = fields.Date(string='Cancellation Date')
