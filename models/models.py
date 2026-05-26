@@ -101,6 +101,9 @@ class InsuranceReason(models.Model):
 class ResPartner(models.Model):
     _inherit = 'res.partner'
     _description = 'Res Partner'
+
+    insurance_policy_ids = fields.One2many('insurance.policy', 'policyholder_id', string='Insurance Policies')
+    insurance_broker_ids = fields.One2many('insurance.policy', 'broker_id', string='Insurance Broker Policies')
     
 
 
