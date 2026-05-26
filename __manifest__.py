@@ -23,6 +23,8 @@
         'security/ir.model.access.csv', 
         'views/actions.xml', 
         'views/menus.xml', 
+        'insurance_policy_views.xml',
+        'insurance_reason_views.xml',
         'report/report.xml'
     ], 
     'installable': True, 

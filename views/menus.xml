@@ -11,4 +11,18 @@
         parent="root_menu"
         sequence="99" />
 
+    <menuitem
+        id="insurance_policy_menu"
+        name="Policy"
+        action="insurance_policy_action"
+        parent="root_menu"
+        sequence="10" />
+
+    <menuitem
+        id="insurance_reason_menu"
+        name="Reason"
+        action="insurance_reason_action"
+        parent="configuration_menu"
+        sequence="10" />
+
 </odoo>

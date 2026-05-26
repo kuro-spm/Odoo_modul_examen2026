@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="insurance_policy_view_list" model="ir.ui.view">
+        <field name="name">insurance.policy.view.list</field>
+        <field name="model">insurance.policy</field>
+        <field name="arch" type="xml">
+            <list
+                decoration-success="not cancellation_date"
+                decoration-danger="cancellation_date">
+                <field name="id" string='Number' />
+                <field name="policyholder_id" />
+                <field name="broker_id" />
+                <field name="effective_date" />
+                <field name="effective_hour" widget="float_time" />
+                <field name="type" />
+                <field name="expiration_date" />
+                <field name="cancellation_date" optional='hide' />
+                <field name="reason_id" optional='hide' />
+            </list>
+        </field>
+    </record>
+
+    <record id="insurance_policy_view_form" model="ir.ui.view">
+        <field name="name">insurance.policy.view.form</field>
+        <field name="model">insurance.policy</field>
+        <field name="arch" type="xml">
+            <form string="Policy">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="product_id" />
+                            <field name="policyholder_id" />
+                            <field name="broker_id" />
+                        </group>
+                        <group>
+                            <field name="id" string='Number' readonly="1" />
+                            <field name="created_by" />
+                            <field name="created_date" />
+                        </group>
+                        <group>
+                            <field name="object" />
+                        </group>
+                        <group string="Data coveration and expiration">
+                            <field name="effective_date" />
+                            <field name="effective_hour" widget="float_time" />
+                            <field name="type" />
+                            <field name="expiration_date" />
+
+                        </group>
+                        <group string="Cancellation reason" invisible="not expiration_date">
+                            <field name="reason_id" />
+                        </group>
+
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
