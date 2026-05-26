@@ -1,5 +1,5 @@
 { 
-    'name': 'examen_pratssara', 
+    'name': 'insurance_pratssara', 
     'version': '1.0', 
     'category': 'Education', 
     'summary': 'Educational module for Odoo practice', 
@@ -13,7 +13,12 @@
     'author': 'Sara Prats Morales', 
     'website': 'http://www.infomila.info', 
     'license': 'LGPL-3', 
-    'depends': ['base'], 
+    'depends': [
+        'base',
+        'product',
+        'sale',
+        'purchase',
+        ], 
     'data': [ 
         'security/ir.model.access.csv', 
         'views/actions.xml', 
