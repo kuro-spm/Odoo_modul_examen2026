@@ -98,6 +98,10 @@ class InsuranceReason(models.Model):
     #    tools.create_unique_index(self._cr, 'insurance_reason_description_uniq', self.ids, ['lower(description)'])
       
     
+class ResPartner(models.Model):
+    _inherit = 'res.partner'
+    _description = 'Res Partner'
+    
 
 
     

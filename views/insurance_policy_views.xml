@@ -39,7 +39,7 @@
                             <field name="created_date" />
                         </group>
 
-                        <field name="object" />
+                        <field name="object" string='Insured Object' />
 
                         <group string="Data coveration and expiration">
                             <field name="effective_date" />
@@ -48,7 +48,8 @@
                             <field name="expiration_date" />
 
                         </group>
-                        <group string="Cancellation reason" invisible="not expiration_date">
+                        <group string="Cancellation reason" invisible="not expiration_date" editable="created_date">
+                            <field name="cancellation_date" />
                             <field name="reason_id" />
                         </group>
 
