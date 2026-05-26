@@ -93,9 +93,9 @@ class InsuranceReason(models.Model):
     created_date = fields.Datetime(string='Created Date', default=fields.Datetime.now)
 
 
-    def _auto_init(self):
-        res = super(InsuranceReason, self)._auto_init()
-        tools.create_unique_index(self._cr, 'insurance_reason_description_uniq', self.ids, ['lower(description)'])
+    #def _auto_init(self):
+    #    res = super(InsuranceReason, self)._auto_init()
+    #    tools.create_unique_index(self._cr, 'insurance_reason_description_uniq', self.ids, ['lower(description)'])
       
     
 

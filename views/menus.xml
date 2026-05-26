@@ -3,7 +3,7 @@
 
     <menuitem
         id="root_menu"
-        name="" /> <!--Posar nom mòdul-->
+        name="Insurance" />
 
     <menuitem
         id="configuration_menu"
