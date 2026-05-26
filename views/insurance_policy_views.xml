@@ -38,9 +38,9 @@
                             <field name="created_by" />
                             <field name="created_date" />
                         </group>
-                        <group>
-                            <field name="object" />
-                        </group>
+
+                        <field name="object" />
+
                         <group string="Data coveration and expiration">
                             <field name="effective_date" />
                             <field name="effective_hour" widget="float_time" />
