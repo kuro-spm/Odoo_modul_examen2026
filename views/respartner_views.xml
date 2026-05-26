@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_partner_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="contracted_policies" string="Contracted Policies" invisible="not customer_rank">
+                    <field name="contracted_policy_ids" readonly='1'>
+                        <tree>
+                            <field name="id" string='Number' />
+                            <field name='product_id' />
+                            <field name="broker_id" />
+                            <field name="effective_date" />
+                            <field name="effective_hour" />
+                        </tree>
+                    </field>
+                </page>
+
+                <page name='sold_policies' string='Sold Policies' invisible="not supplier_rank">
+                    <field name="sold_policy_ids" readonly='1'>
+                        <tree>
+                            <field name="id" string='Number' />
+                            <field name='product_id' />
+                            <field name="broker_id" />
+                            <field name="effective_date" />
+                            <field name="effective_hour" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+
+        </field>
+    </record>
+
+</odoo>
