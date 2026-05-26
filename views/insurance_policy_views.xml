@@ -42,11 +42,14 @@
                         <field name="object" string='Insured Object' />
 
                         <group string="Data coveration and expiration">
-                            <field name="effective_date" />
-                            <field name="effective_hour" widget="float_time" />
-                            <field name="type" />
-                            <field name="expiration_date" />
-
+                            <group>
+                                <field name="effective_date" />
+                                <field name="effective_hour" widget="float_time" />
+                            </group>
+                            <group>
+                                <field name="type" />
+                                <field name="expiration_date" />
+                            </group>
                         </group>
                         <group string="Cancellation reason" invisible="not expiration_date" editable="created_date">
                             <field name="cancellation_date" />
